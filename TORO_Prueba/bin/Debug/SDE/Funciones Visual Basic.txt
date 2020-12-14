@@ -1,0 +1,165 @@
+
+'Declaracion de variables que podrias utilizar
+
+Private Declare Function OpenProcess Lib "kernel32" (ByVal dwDesiredAccess As Long, ByVal bInheritHandle As Long, ByVal dwProcessId As Long) As Long
+Private Declare Function GetExitCodeProcess Lib "kernel32" (ByVal hProcess As Long, lpExitCode As Long) As Long
+
+'Variable para hablarle al flash magic, nota: remplazar la ruta "C:\......" a donde pegaste la carpeta de flash magic
+Glo_Cnf_FlashMagicPath = IniLine_GetSet(INIT_Path, "CONFIG", "FlashMagic", "C:\Program Files (x86)\Flash Magic\FM.exe", True)
+Private Task_Survey As Long 
+Private hProcess As Long
+
+'Funciones para El BootLoader
+
+'Esta funciones es para programarla {el procedimiento que te anote en la hoja)
+Public Function ProgramaPieza() As Boolean
+Dim Path As String
+Dim Prog As String
+Dim IRet As Integer
+Dim SalNum As Integer
+Dim Cnt1 As Integer
+    
+    Call Dev_DIO0.Prende110AC
+    Call Dev_A_D2537_1.Init
+    Call Dev_A_D2537_1.OutpBit(1, 1)                'Prende Unidad
+    Call Dev_A_D2537_1.OutpBit(2, 1)                'Conecta RS232
+    Pause 1000
+    Call Dev_A_D2537_1.OutpBit(6, 1)                'Sw2
+    Call Dev_A_D2537_1.OutpBit(5, 1)                'SW Reset
+    Pause 250
+    Call Dev_A_D2537_1.OutpBit(5, 0)                'SW Reset
+    Pause 100
+    Call Dev_A_D2537_1.OutpBit(6, 0)                'Sw2
+    Delay 100
+    ProgramaPieza = PruebaCORRIENTE
+    If (ProgramaPieza = True) Then
+        Path = Glo_Cnf_FlashMagicPath
+        Prog = IniLine_GetSet(Path, "PROGRAM", "BootLoad", "Program Name Undefined", True)
+        ProgramaPieza = Programar(Path, Prog)
+    End If
+    Call Dev_A_D2537_1.Init
+End Function
+
+'*************************************************************
+Public Function Programar(ByVal Path As String, ByVal Programa As String) As Boolean
+Dim Commando As String
+Dim OldPath As String
+Dim Path2 As String
+Dim exitCode As Long
+
+On Error GoTo ErrHand:
+    OldPath = NewAppPath
+    Programar = False
+    Commando = """" & Path & """ " & "@" & Programa & ""
+    DoEvents
+    Task_Survey = Shell(Commando, vbNormalFocus)
+    hProcess = OpenProcess(PROCESS_QUERY_INFORMATION, False, Task_Survey)
+    Programar = SurveyProcess(Task_Survey) 'vbhide
+    Exit Function
+
+ErrHand:
+    Programar = False
+    Call AddLog("Progamacion= " & "ERROR")
+
+End Function
+
+
+Public Function SurveyProcess(hTask As Long) As Boolean
+Dim exitCode As Long
+    
+    SurveyProcess = False
+    hProcess = OpenProcess(PROCESS_QUERY_INFORMATION, False, hTask)
+    Do
+        DoEvents
+        'Call Loop_Sensores
+        GetExitCodeProcess hProcess, exitCode
+    Loop While exitCode = STILL_ACTIVE
+    
+    If exitCode = 0 Then
+        SurveyProcess = True
+    End If
+End Function
+
+
+Public Function IniLine_GetSet(ByVal FName As String, ByVal Section As String, ByVal Parameter As String, ByVal DefaultVal As String, Optional ByVal Crear As Boolean = False) As String
+
+    IniLine_GetSet = ReadIni(FName, Section, Parameter, "AS_ValNoExiste_AS")
+    If IniLine_GetSet = "AS_ValNoExiste_AS" Then
+        IniLine_GetSet = DefaultVal
+        If (Crear = True) Then Call WriteIni(FName, Section, Parameter, IniLine_GetSet)
+    End If
+End Function
+
+'Esta es la funcines para cargar los archivos de las USB te puede servir para el flash y el firmware
+'Nota como esta hecha actualmente, esta revisando el parpadeo de los leds mientras programa, son dos led, lectura y escritura
+
+Public Function PruebaCARGAHEX() As Boolean
+Dim BRet As Boolean
+Dim TOut As Integer
+Dim Elapsed As Integer
+Dim Tex_Orig As String
+Dim Salir As Boolean
+Dim Tiempo As New CLS_Tiempos
+Dim Estados As String
+On Error GoTo ErrHand:
+
+    BRet = True
+    Call Upd_Leds
+    Call Upd_Opercion("CARGADO HEX USB...")
+    
+    Call Dev_DIO0.Prende110AC
+    Call Dev_A_D2537_1.Init
+    Call Dev_A_D2537_1.OutpBit(3, 1)                'Conecta USB
+    Call Dev_A_D2537_1.OutpBit(1, 1)                'Prende Unidad
+    Pause 1000
+    Call Dev_A_D2537_1.OutpBit(5, 1)                'SW Reset
+    Pause 250
+    Call Dev_A_D2537_1.OutpBit(5, 0)                'SW Reset
+    Delay 3000
+    
+    PruebaCARGAHEX = False
+    TOut = 60
+    Tex_Orig = Opera_Msg
+    If (AS_Debug = False) Then
+        Salir = False
+        Tiempo.Enable
+        While (Salir = False)
+            Call Upd_Opercion("Esperando a que programe (" & Format(TOut - Tiempo.Elapsed, "#0.0") & ")")
+            If (Chk_ForStopAbort(True, True) = True) Then
+                Salir = True
+                BRet = False
+            End If
+            Elapsed = Tiempo.Elapsed
+            If (Tiempo.Elapsed > TOut) Then
+                Salir = True
+                BRet = False
+            End If
+            Call Dev_A_D2537_1.Scan(0, 63, 275, ((63) + 1) * 125 * 2)
+            Estados = ""
+            Estados = Estados & Regresaestado(0, 43, -1)
+            Estados = Estados & Regresaestado(0, 43, 1)
+            Estados = Estados & Regresaestado(1, 45, -1)
+            Estados = Estados & Regresaestado(1, 45, 1)
+            If (Estados <> "1010") Then
+                Salir = True
+                If (Elapsed < 5) Then BRet = False
+            End If
+            Wend
+        Else
+            Call Upd_Opercion("Esperando a que programe  (" & Format(1.5, "#0.0") & ")")
+            Pause 1500
+        End If
+    Call Upd_Opercion(Tex_Orig)
+    Call AddLog("Prog HEX       = " & BRet)
+    If (AS_Debug = True) Then
+        BRet = True
+        Call AddLog("Prog HEX       = " & "Debug")
+    End If
+    PruebaCARGAHEX = BRet
+    Exit Function
+
+ErrHand:
+    PruebaCARGAHEX = False
+    Call AddLog("Prog HEX       = " & "ERROR")
+End Function
+

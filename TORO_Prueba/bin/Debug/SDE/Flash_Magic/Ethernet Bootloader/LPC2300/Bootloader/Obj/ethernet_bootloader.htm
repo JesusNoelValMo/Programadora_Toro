@@ -1,0 +1,646 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Obj\ethernet_bootloader.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Obj\ethernet_bootloader.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT4.0 [Build 728]: Last Updated: Tue Aug 03 11:28:13 2010
+<BR><P>
+<H3>Maximum Stack Usage =        160 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+sbl_main &rArr; enter_isp &rArr; isp_cmd_loop &rArr; exec_isp_cmd &rArr; read &rArr; getline &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[e8c784]">Reset_Handler</a>
+ <LI><a href="#[e8c928]">Undef_Handler</a>
+ <LI><a href="#[e8c8ec]">SWI_Handler</a>
+ <LI><a href="#[e8c8b0]">PAbt_Handler</a>
+ <LI><a href="#[e8c874]">DAbt_Handler</a>
+ <LI><a href="#[e8c838]">IRQ_Handler</a>
+ <LI><a href="#[e8c7fc]">FIQ_Handler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[e8c928]">Undef_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e8c928]">Undef_Handler</a><BR>
+ <LI><a href="#[e8c8ec]">SWI_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e8c8ec]">SWI_Handler</a><BR>
+ <LI><a href="#[e8c8b0]">PAbt_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e8c8b0]">PAbt_Handler</a><BR>
+ <LI><a href="#[e8c874]">DAbt_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e8c874]">DAbt_Handler</a><BR>
+ <LI><a href="#[e8c838]">IRQ_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e8c838]">IRQ_Handler</a><BR>
+ <LI><a href="#[e8c7fc]">FIQ_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[e8c7fc]">FIQ_Handler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[e8c784]">Reset_Handler</a>
+ <LI><a href="#[e8c928]">Undef_Handler</a>
+ <LI><a href="#[e8c8ec]">SWI_Handler</a>
+ <LI><a href="#[e8c8b0]">PAbt_Handler</a>
+ <LI><a href="#[e8c874]">DAbt_Handler</a>
+ <LI><a href="#[e8c838]">IRQ_Handler</a>
+ <LI><a href="#[e8c7fc]">FIQ_Handler</a>
+ <LI><a href="#[e8c748]">sbl_main</a>
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[e8c784]"></a>Reset_Handler</STRONG> (ARM, 0 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[e8c07c]"></a>init_PLL</STRONG> (Thumb, 116 bytes, Stack size 12 bytes, board_init.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = init_PLL
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8bf8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init
+</UL>
+
+<P><STRONG><a name="[e8c040]"></a>init_MAM</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, board_init.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8bf8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init
+</UL>
+
+<P><STRONG><a name="[e8c004]"></a>init_PCB</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, board_init.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8bf8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init
+</UL>
+
+<P><STRONG><a name="[e8bfc8]"></a>VectorsRemap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, board_init.o(.text), UNUSED)
+
+<P><STRONG><a name="[e8bf8c]"></a>board_init</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, board_init.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = board_init &rArr; init_PLL
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8bf14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_init
+<LI><a href="#[e8bf50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_Delay
+<LI><a href="#[e8c004]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_PCB
+<LI><a href="#[e8c040]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_MAM
+<LI><a href="#[e8c07c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_PLL
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8b62c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_isp
+</UL>
+
+<P><STRONG><a name="[e8b62c]"></a>enter_isp</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, sbl_main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
+<LI>Call Chain = enter_isp &rArr; isp_cmd_loop &rArr; exec_isp_cmd &rArr; read &rArr; getline &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8b500]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isp_cmd_loop
+<LI><a href="#[e8b53c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_comms
+<LI><a href="#[e8b5b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;comm_handshake
+<LI><a href="#[e8bf8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8c748]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sbl_main
+</UL>
+
+<P><STRONG><a name="[e8c748]"></a>sbl_main</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, sbl_main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
+<LI>Call Chain = sbl_main &rArr; enter_isp &rArr; isp_cmd_loop &rArr; exec_isp_cmd &rArr; read &rArr; getline &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8b4c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_code_present
+<LI><a href="#[e8b578]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;execute_user_code
+<LI><a href="#[e8b5f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_isp_entry_pin
+<LI><a href="#[e8b62c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_isp
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[e8b53c]"></a>init_comms</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, comms.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = init_comms &rArr; init_emac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8adf8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_emac
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8b62c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_isp
+</UL>
+
+<P><STRONG><a name="[e8af24]"></a>getline</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, comms.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = getline &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8aeac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_getline
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89dcc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[e89e08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_to_ram
+<LI><a href="#[e89fac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_isp
+<LI><a href="#[e8b500]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isp_cmd_loop
+</UL>
+
+<P><STRONG><a name="[e8aee8]"></a>sendline_crlf</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, comms.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = sendline_crlf &rArr; emac_sendline_crlf &rArr; CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8ae34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_sendline_crlf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+<LI><a href="#[e89c28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_mem
+<LI><a href="#[e89c64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blank_check
+<LI><a href="#[e89ca0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;erase
+<LI><a href="#[e89cdc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;copy
+<LI><a href="#[e89d18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prepare_sector
+<LI><a href="#[e89d54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unlock
+<LI><a href="#[e89d90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;go_cmd
+<LI><a href="#[e89dcc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[e89e08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_to_ram
+<LI><a href="#[e89fac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_isp
+<LI><a href="#[e8b500]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isp_cmd_loop
+</UL>
+
+<P><STRONG><a name="[e8b5b4]"></a>comm_handshake</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, comms.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = comm_handshake &rArr; emac_handshake &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8ae70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_handshake
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8b62c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_isp
+</UL>
+
+<P><STRONG><a name="[e87a68]"></a>__aeabi_uidiv</STRONG> (ARM, 0 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text_udiv), UNUSED)
+
+<P><STRONG><a name="[e87a2c]"></a>__aeabi_uidivmod</STRONG> (ARM, 28 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text_udiv))
+<BR><BR>[Calls]<UL><LI><a href="#[e87b1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div_large
+<LI><a href="#[e87b58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div4
+<LI><a href="#[e87b94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div8
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a (via Veneer)
+</UL>
+
+<P><STRONG><a name="[e89afc]"></a>__ARM_common_call_via_r0</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, isp_iap.o(i.__ARM_common_call_via_r0))
+<BR><BR>[Called By]<UL><LI><a href="#[e89d90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;go_cmd
+</UL>
+
+<P><STRONG><a name="[e89ac0]"></a>__ARM_common_call_via_r2</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, isp_iap.o(i.__ARM_common_call_via_r2))
+<BR><BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+<LI><a href="#[e89c28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_mem
+<LI><a href="#[e89c64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blank_check
+<LI><a href="#[e89ca0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;erase
+<LI><a href="#[e89cdc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;copy
+<LI><a href="#[e89d18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prepare_sector
+<LI><a href="#[e8b4c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;user_code_present
+</UL>
+
+<P><STRONG><a name="[e8a0d8]"></a>is_div</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, isp_iap.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+</UL>
+
+<P><STRONG><a name="[e8a09c]"></a>__rt_div0</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, isp_iap.o(.text), UNUSED)
+
+<P><STRONG><a name="[e8a060]"></a>str_cmp</STRONG> (Thumb, 34 bytes, Stack size 4 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = str_cmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89dcc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[e89fac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_isp
+<LI><a href="#[e8ae70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_handshake
+</UL>
+
+<P><STRONG><a name="[e8a024]"></a>a_to_i</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = a_to_i
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89e08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_to_ram
+<LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+</UL>
+
+<P><STRONG><a name="[e89fe8]"></a>i_to_a</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
+<LI>Call Chain = i_to_a
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e87a2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+<LI><a href="#[e89c28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_mem
+<LI><a href="#[e89c64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blank_check
+<LI><a href="#[e89ca0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;erase
+<LI><a href="#[e89cdc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;copy
+<LI><a href="#[e89d18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prepare_sector
+<LI><a href="#[e89d54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unlock
+<LI><a href="#[e89d90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;go_cmd
+<LI><a href="#[e89dcc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[e89e08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_to_ram
+<LI><a href="#[e8b500]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isp_cmd_loop
+</UL>
+
+<P><STRONG><a name="[e89fac]"></a>run_isp</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, isp_iap.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[e8a060]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;str_cmp
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+<LI><a href="#[e8af24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+</UL>
+
+<P><STRONG><a name="[e89f70]"></a>param_check</STRONG> (Thumb, 156 bytes, Stack size 20 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = param_check &rArr; a_to_i
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8a024]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;a_to_i
+<LI><a href="#[e8a0d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_div
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89c28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_mem
+<LI><a href="#[e89c64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blank_check
+<LI><a href="#[e89ca0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;erase
+<LI><a href="#[e89cdc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;copy
+<LI><a href="#[e89d18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prepare_sector
+<LI><a href="#[e89d54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unlock
+<LI><a href="#[e89d90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;go_cmd
+<LI><a href="#[e89dcc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[e89e08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_to_ram
+</UL>
+
+<P><STRONG><a name="[e89f34]"></a>iap_entry</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, isp_iap.o(.text), UNUSED)
+
+<P><STRONG><a name="[e89ef8]"></a>decode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, isp_iap.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e89ebc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uudecode
+</UL>
+
+<P><STRONG><a name="[e89ebc]"></a>uudecode</STRONG> (Thumb, 180 bytes, Stack size 20 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = uudecode
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89ef8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;decode
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89e08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_to_ram
+</UL>
+
+<P><STRONG><a name="[e89e80]"></a>encode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, isp_iap.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e89e44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uuencode
+</UL>
+
+<P><STRONG><a name="[e89e44]"></a>uuencode</STRONG> (Thumb, 124 bytes, Stack size 20 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = uuencode
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89dcc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+</UL>
+
+<P><STRONG><a name="[e89e08]"></a>write_to_ram</STRONG> (Thumb, 232 bytes, Stack size 40 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
+<LI>Call Chain = write_to_ram &rArr; getline &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89ebc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uudecode
+<LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8a024]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;a_to_i
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+<LI><a href="#[e8af24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+</UL>
+
+<P><STRONG><a name="[e89dcc]"></a>read</STRONG> (Thumb, 186 bytes, Stack size 40 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
+<LI>Call Chain = read &rArr; getline &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89e44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uuencode
+<LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8a060]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;str_cmp
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+<LI><a href="#[e8af24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+</UL>
+
+<P><STRONG><a name="[e89d90]"></a>go_cmd</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
+<LI>Call Chain = go_cmd &rArr; sendline_crlf &rArr; emac_sendline_crlf &rArr; CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89a48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_DeInit
+<LI><a href="#[e89afc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r0
+<LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+</UL>
+
+<P><STRONG><a name="[e89d54]"></a>unlock</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
+<LI>Call Chain = unlock &rArr; sendline_crlf &rArr; emac_sendline_crlf &rArr; CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+</UL>
+
+<P><STRONG><a name="[e89d18]"></a>prepare_sector</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
+<LI>Call Chain = prepare_sector &rArr; sendline_crlf &rArr; emac_sendline_crlf &rArr; CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89ac0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r2
+<LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+</UL>
+
+<P><STRONG><a name="[e89cdc]"></a>copy</STRONG> (Thumb, 156 bytes, Stack size 24 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68 + Unknown Stack Size
+<LI>Call Chain = copy &rArr; sendline_crlf &rArr; emac_sendline_crlf &rArr; CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89ac0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r2
+<LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+</UL>
+
+<P><STRONG><a name="[e89ca0]"></a>erase</STRONG> (Thumb, 178 bytes, Stack size 24 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68 + Unknown Stack Size
+<LI>Call Chain = erase &rArr; sendline_crlf &rArr; emac_sendline_crlf &rArr; CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89ac0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r2
+<LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+</UL>
+
+<P><STRONG><a name="[e89c64]"></a>blank_check</STRONG> (Thumb, 142 bytes, Stack size 16 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
+<LI>Call Chain = blank_check &rArr; sendline_crlf &rArr; emac_sendline_crlf &rArr; CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89ac0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r2
+<LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+</UL>
+
+<P><STRONG><a name="[e89c28]"></a>compare_mem</STRONG> (Thumb, 120 bytes, Stack size 16 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
+<LI>Call Chain = compare_mem &rArr; sendline_crlf &rArr; emac_sendline_crlf &rArr; CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89ac0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r2
+<LI><a href="#[e89f70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;param_check
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+</UL>
+
+<P><STRONG><a name="[e89bec]"></a>tokenize</STRONG> (Thumb, 100 bytes, Stack size 36 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = tokenize
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8b500]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isp_cmd_loop
+</UL>
+
+<P><STRONG><a name="[e89bb0]"></a>enable_interrupts</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, isp_iap.o(.text), UNUSED)
+
+<P><STRONG><a name="[e89b74]"></a>disable_interrupts</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, isp_iap.o(.text), UNUSED)
+
+<P><STRONG><a name="[e8b578]"></a>execute_user_code</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, isp_iap.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8c748]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sbl_main
+</UL>
+
+<P><STRONG><a name="[e8b4c4]"></a>user_code_present</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = user_code_present
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89ac0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r2
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8c748]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sbl_main
+</UL>
+
+<P><STRONG><a name="[e8b5f0]"></a>check_isp_entry_pin</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, isp_iap.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8c748]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sbl_main
+</UL>
+
+<P><STRONG><a name="[e89b38]"></a>exec_isp_cmd</STRONG> (Thumb, 258 bytes, Stack size 16 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112 + Unknown Stack Size
+<LI>Call Chain = exec_isp_cmd &rArr; read &rArr; getline &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89a84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8 (via Veneer)
+<LI><a href="#[e89ac0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r2
+<LI><a href="#[e89c28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compare_mem
+<LI><a href="#[e89c64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blank_check
+<LI><a href="#[e89ca0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;erase
+<LI><a href="#[e89cdc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;copy
+<LI><a href="#[e89d18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prepare_sector
+<LI><a href="#[e89d54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unlock
+<LI><a href="#[e89d90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;go_cmd
+<LI><a href="#[e89dcc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<LI><a href="#[e89e08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_to_ram
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8b500]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isp_cmd_loop
+</UL>
+
+<P><STRONG><a name="[e8b500]"></a>isp_cmd_loop</STRONG> (Thumb, 198 bytes, Stack size 32 bytes, isp_iap.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
+<LI>Call Chain = isp_cmd_loop &rArr; exec_isp_cmd &rArr; read &rArr; getline &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd
+<LI><a href="#[e89bec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tokenize
+<LI><a href="#[e89fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i_to_a
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+<LI><a href="#[e8af24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8b62c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enter_isp
+</UL>
+
+<P><STRONG><a name="[e88d28]"></a>write_PHY</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, emac.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8adf8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_emac
+</UL>
+
+<P><STRONG><a name="[e88cec]"></a>read_PHY</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, emac.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8adf8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_emac
+</UL>
+
+<P><STRONG><a name="[e88cb0]"></a>ReadFrame_EMAC</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, emac.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e88c74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CopyFromFrame_EMAC
+</UL>
+
+<P><STRONG><a name="[e88c74]"></a>CopyFromFrame_EMAC</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, emac.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CopyFromFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e88cb0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadFrame_EMAC
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8aeac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_getline
+</UL>
+
+<P><STRONG><a name="[e88c38]"></a>same_mac</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, emac.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = same_mac
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e88bfc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;filter_pass
+</UL>
+
+<P><STRONG><a name="[e88bfc]"></a>filter_pass</STRONG> (Thumb, 54 bytes, Stack size 12 bytes, emac.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e88c38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;same_mac
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8aeac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_getline
+</UL>
+
+<P><STRONG><a name="[e88bc0]"></a>WriteFrame_EMAC</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, emac.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e88b84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CopyToFrame_EMAC
+</UL>
+
+<P><STRONG><a name="[e88b84]"></a>CopyToFrame_EMAC</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, emac.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e88bc0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteFrame_EMAC
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8ae34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_sendline_crlf
+</UL>
+
+<P><STRONG><a name="[e88b48]"></a>chksum16</STRONG> (Thumb, 54 bytes, Stack size 4 bytes, emac.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = chksum16
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8ae34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_sendline_crlf
+</UL>
+
+<P><STRONG><a name="[e8adf8]"></a>init_emac</STRONG> (Thumb, 504 bytes, Stack size 20 bytes, emac.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = init_emac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e88cec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_PHY
+<LI><a href="#[e88d28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_PHY
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8b53c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_comms
+</UL>
+
+<P><STRONG><a name="[e8aeac]"></a>emac_getline</STRONG> (Thumb, 346 bytes, Stack size 32 bytes, emac.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e87db0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy (via Veneer)
+<LI><a href="#[e88ad0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_HasTimestampExpired
+<LI><a href="#[e88b0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_GetTimestamp
+<LI><a href="#[e88bfc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;filter_pass
+<LI><a href="#[e88c74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CopyFromFrame_EMAC
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8ae70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_handshake
+<LI><a href="#[e8af24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+</UL>
+
+<P><STRONG><a name="[e8ae34]"></a>emac_sendline_crlf</STRONG> (Thumb, 230 bytes, Stack size 24 bytes, emac.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = emac_sendline_crlf &rArr; CopyToFrame_EMAC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e87db0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy (via Veneer)
+<LI><a href="#[e88b48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chksum16
+<LI><a href="#[e88b84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CopyToFrame_EMAC
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8ae70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_handshake
+<LI><a href="#[e8aee8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendline_crlf
+</UL>
+
+<P><STRONG><a name="[e8ae70]"></a>emac_handshake</STRONG> (Thumb, 110 bytes, Stack size 48 bytes, emac.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = emac_handshake &rArr; emac_getline &rArr; filter_pass &rArr; same_mac
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e87db0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy (via Veneer)
+<LI><a href="#[e8a060]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;str_cmp
+<LI><a href="#[e8ae34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_sendline_crlf
+<LI><a href="#[e8aeac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_getline
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8b5b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;comm_handshake
+</UL>
+
+<P><STRONG><a name="[e8bf14]"></a>Timer_init</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, timer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8bf8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init
+</UL>
+
+<P><STRONG><a name="[e89a48]"></a>Timer_DeInit</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, timer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e89d90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;go_cmd
+</UL>
+
+<P><STRONG><a name="[e88b0c]"></a>Timer_GetTimestamp</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, timer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8aeac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_getline
+</UL>
+
+<P><STRONG><a name="[e88ad0]"></a>Timer_HasTimestampExpired</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, timer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8aeac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_getline
+<LI><a href="#[e8bf50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_Delay
+</UL>
+
+<P><STRONG><a name="[e8bf50]"></a>Timer_Delay</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, timer.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Timer_Delay
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e88ad0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_HasTimestampExpired
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8bf8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;board_init
+</UL>
+
+<P><STRONG><a name="[e87db0]"></a>__aeabi_memcpy</STRONG> (ARM, 0 bytes, Stack size 0 bytes, rt_memcpy.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e8ae34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_sendline_crlf (via Veneer)
+<LI><a href="#[e8ae70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_handshake (via Veneer)
+<LI><a href="#[e8aeac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emac_getline (via Veneer)
+</UL>
+
+<P><STRONG><a name="[e87d74]"></a>__rt_memcpy</STRONG> (ARM, 212 bytes, Stack size 0 bytes, rt_memcpy.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[e86f64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+</UL>
+
+<P><STRONG><a name="[e87d38]"></a>_memcpy_lastbytes</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memcpy.o(.text), UNUSED)
+
+<P><STRONG><a name="[e87ae0]"></a>__aeabi_idiv</STRONG> (ARM, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
+
+<P><STRONG><a name="[e87aa4]"></a>__aeabi_idivmod</STRONG> (ARM, 384 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
+
+<P><STRONG><a name="[e86f64]"></a>__aeabi_memcpy4</STRONG> (ARM, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[e87d74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
+</UL>
+
+<P><STRONG><a name="[e86f28]"></a>__aeabi_memcpy8</STRONG> (ARM, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[e86eec]"></a>__rt_memcpy_w</STRONG> (ARM, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[e86eb0]"></a>_memcpy_lastbytes_aligned</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
+
+<P><STRONG><a name="[e89a84]"></a>__ARM_common_switch8</STRONG> (ARM, 24 bytes, Stack size 0 bytes, isp_iap.o(i.__ARM_common_switch8))
+<BR><BR>[Called By]<UL><LI><a href="#[e89b38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exec_isp_cmd (via Veneer)
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[e8c928]"></a>Undef_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[e8c928]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Undef_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8c928]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Undef_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[e8c8ec]"></a>SWI_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[e8c8ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SWI_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8c8ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SWI_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[e8c8b0]"></a>PAbt_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[e8c8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PAbt_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8c8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PAbt_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[e8c874]"></a>DAbt_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[e8c874]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAbt_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8c874]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAbt_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[e8c838]"></a>IRQ_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[e8c838]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8c838]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[e8c7fc]"></a>FIQ_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[e8c7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIQ_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e8c7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIQ_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[e87b94]"></a>__arm_div8</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e87a2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+
+<P><STRONG><a name="[e87b58]"></a>__arm_div4</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e87a2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+
+<P><STRONG><a name="[e87b1c]"></a>__arm_div_large</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e87a2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

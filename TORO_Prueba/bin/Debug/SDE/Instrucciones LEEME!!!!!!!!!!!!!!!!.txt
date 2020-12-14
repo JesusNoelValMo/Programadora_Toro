@@ -1,0 +1,10 @@
+
+1.- Las carpetas con los numeros de parte, son los firmware para cada tablilla (1 USB por modelo).
+2.- La carpeta Flash es el archivo que va a ir en otra USB diferente (misma para todos los modelos).
+3.- La carpeta Bootloader viene el archivo que se cargara por puerto serie, ahi mismo viene el archivo .fms
+    en este hay que cambiar la ruta donde dice HEXFILE y VERIFY, ahi se pondra la ruta donde pegaras el BootLoader.
+4.- La carpeta que dice Flash Magic, es el software que se utiliza para cargar el bootloader, solo hay que copiar y pegar la carpeta.
+5.- el archivo .txt qye se llama funciones visual basic, ahi vienen las funciones que puedes utilizar para cargar el boot, flash y firmware
+    tendras que adaptarlas a tu programa.
+
+Cualquer cosa puedes hablarme o mandarme msj.
