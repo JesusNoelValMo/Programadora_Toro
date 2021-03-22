@@ -1,0 +1,100 @@
+C:\Users\User\AppData\Local\Temporary Projects\TORO_Prueba\bin\Debug\TORO_Prueba.exe
+C:\Users\User\AppData\Local\Temporary Projects\TORO_Prueba\bin\Debug\TORO_Prueba.pdb
+C:\Users\User\AppData\Local\Temporary Projects\TORO_Prueba\bin\Debug\TORO_Prueba.xml
+C:\Users\User\AppData\Local\Temporary Projects\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Form1.resources
+C:\Users\User\AppData\Local\Temporary Projects\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Resources.resources
+C:\Users\User\AppData\Local\Temporary Projects\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbproj.GenerateResource.Cache
+C:\Users\User\AppData\Local\Temporary Projects\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+C:\Users\User\AppData\Local\Temporary Projects\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+C:\Users\User\AppData\Local\Temporary Projects\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE APPS\TORO\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+C:\Users\User\Documents\SDE APPS\TORO\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+C:\Users\User\Documents\SDE APPS\TORO\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.exe
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.xml
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Resources.resources
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbproj.GenerateResource.Cache
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Produccion.resources
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Ini.resources
+C:\Users\User\Documents\SDE APPS\TORO APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Mant.resources
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.exe
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.xml
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Mant.resources
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Produccion.resources
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Ini.resources
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Resources.resources
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbproj.GenerateResource.Cache
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbprojResolveAssemblyReference.cache
+C:\Users\User\Documents\SDE_APPS\TORO_APP\Toro_Programadora\TORO_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Frm_Log_Ini.resources
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.exe
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.pdb
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.xml
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Frm_Log_Ini.resources
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Mant.resources
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Produccion.resources
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Ini.resources
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Resources.resources
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\toroadmin\Desktop\New folder\Toro_Prueba\TORO_Prueba\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.exe
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.pdb
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.xml
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Frm_Log_Ini.resources
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Mant.resources
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Produccion.resources
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Ini.resources
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Resources.resources
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\toroadmin\Desktop\Toro_Prueba\TORO_Prueba\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\SDE\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.exe
+C:\SDE\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.pdb
+C:\SDE\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.xml
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Frm_Log_Ini.resources
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Mant.resources
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Produccion.resources
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Ini.resources
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Resources.resources
+F:\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+F:\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+F:\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE_APPS\Repositorios_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+C:\Users\User\Documents\SDE_APPS\Repositorios_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+C:\Users\User\Documents\SDE_APPS\Repositorios_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.exe
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.xml
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.exe
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.pdb
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\bin\Debug\TORO_Prueba.xml
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Frm_Log_Ini.resources
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Mant.resources
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Produccion.resources
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Ini.resources
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.Resources.resources
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbproj.GenerateResource.Cache
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbprojAssemblyReference.cache
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbproj.CoreCompileInputs.cache
+C:\Users\User\Documents\SDE_APPS\Repositorios\Programadora_Toro\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbproj.CopyComplete
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbproj.GenerateResource.Cache
+C:\SDE\Toro_Prueba\TORO_Prueba\obj\x86\Debug\TORO_Prueba.vbprojResolveAssemblyReference.cache
